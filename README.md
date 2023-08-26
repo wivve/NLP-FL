@@ -6,7 +6,7 @@ The NLP-FL repository is used to implement an AI model that generats Scalable Ve
 
 ## Features
 
-- **Text to SVG Conversion:** Easily convert plain text into SVG format.(coming soon on 🤗)
+- **Text to SVG:** Easy way to generate SVG from given prompt.(coming soon on 🤗)
 - **Web-Based Interface:** Access the tool through a user-friendly web interface.(coming soon)
 - **Command-Line Interface:** Use the tool from the command line for scripting and automation.(coming soon)
 
