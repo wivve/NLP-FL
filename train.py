@@ -59,6 +59,7 @@ Data = {}
 # -----------------------
 
 NLP_FL = model.NET().to(device=device)
+NLP_FL.train()
 optim = torch.optim.Adam(NLP_FL.parameters(),lr=1e2)
 crite = torch.nn.CrossEntropyLoss()
 for i in range(epoch):
@@ -70,3 +71,6 @@ for i in range(epoch):
         loss.backtrack()
         optim.zero_grad()
 
+
+print("Done.")
+torch.save(NLP_FL,file)

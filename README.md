@@ -72,5 +72,3 @@ We welcome contributions to the Text to SVG project. If you would like to contri
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-
-Happy text-to-SVG converting! 🚀
