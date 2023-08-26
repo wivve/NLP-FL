@@ -2,14 +2,13 @@
 
 ## Overview
 
-The Text to SVG repository is a simple tool that converts text into Scalable Vector Graphics (SVG) format. This project aims to provide an easy and efficient way to create SVG files from plain text, making it useful for various applications such as web design, graphic design, and data visualization.
+The NLP-FL repository is used to implement an AI model that generats Scalable Vector Graphics (SVG) from text. This model aims to provide an easy and efficient way to create SVG files, making it useful for various applications such as web design, graphic design, and data visualization.This model will avalable on 🤗
 
 ## Features
 
-- **Text to SVG Conversion:** Easily convert plain text into SVG format.
-- **Customization:** Customize the SVG output by specifying fonts, colors, and other styling options.
-- **Web-Based Interface:** Access the tool through a user-friendly web interface.
-- **Command-Line Interface:** Use the tool from the command line for scripting and automation.
+- **Text to SVG Conversion:** Easily convert plain text into SVG format.(coming soon on 🤗)
+- **Web-Based Interface:** Access the tool through a user-friendly web interface.(coming soon)
+- **Command-Line Interface:** Use the tool from the command line for scripting and automation.(coming soon)
 
 ## Installation
 
@@ -17,18 +16,18 @@ The Text to SVG repository is a simple tool that converts text into Scalable Vec
 
 - Python 3.11.+
 - Pytorch 2.*+
-### Web Interface
+### Usage
 
 1. Clone this repository:
 
     ```shell
-    git clone https://github.com/wivve/nlp-fl.git
+    git clone https://github.com/wivve/NLP-FL.git
     ```
 
 2. Change into the project directory:
 
     ```shell
-    cd nlp-fl
+    cd NLP-FL
     ```
 
 3. Install the required Python packages:
@@ -37,20 +36,18 @@ The Text to SVG repository is a simple tool that converts text into Scalable Vec
     pip install -r requirements.txt
     ```
 
-4. Start the web-based interface:
+4. Start the training on cli:
 
     ```shell
     python train.py --model /path/to/file --dataset /dataset/x /dataset/y
     ```
-
-5. Open your web browser and go to `http://localhost:5000` to access the Text to SVG tool.
-
-## Usage
-
+    
 ### Web Interface
 
 Coming soon ...
+### Commandline Interface
 
+Coming soon ...
 ## Contributing
 
 We welcome contributions to the Text to SVG project. If you would like to contribute, please follow these steps:
