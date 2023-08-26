@@ -7,7 +7,7 @@ import argparse as arg
 
 prase = arg.ArgumentParser(
     prog="train",
-    description="T@V",
+    description="TEXT to Scaleable Vector Graphics [Trainner]",
     epilog="Example: train --model ./model.pk --dataset ./data/prompt ./data/svg" 
 )
 prase.add_argument(
@@ -24,12 +24,16 @@ prase.add_argument(
     required=True,
     help="add dataset"
 )
-
 prase.add_argument(
     "--epoch",
     action="store",
     default=100,
     type=int,
+    help="epoch",
+)
+prase.add_argument(
+    "--conform","-c",
+    action="store_true",
     help="epoch",
 )
 gpu_groups = prase.add_mutually_exclusive_group(required=True)
@@ -48,14 +52,21 @@ else:
 
 print("Model : ",file)
 
-# -----------------
+# TODO: -----------------
 # DAtaset  x = dataset[0] y=dataset[1]
 # out : Data[Dataloader]
-
+Data = {}
+# -----------------------
 
 NLP_FL = model.NET().to(device=device)
 optim = torch.optim.Adam(NLP_FL.parameters(),lr=1e2)
 crite = torch.nn.CrossEntropyLoss()
 for i in range(epoch):
     print(f"[ Epoch :{ i+1 }\t]")
-    
+    for X,Y in Data.items():
+        Y_predict = NLP_FL(X)
+        loss = crite(Y_predict,Y)
+        optim.step()
+        loss.backtrack()
+        optim.zero_grad()
+
