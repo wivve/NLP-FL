@@ -16,7 +16,7 @@ The Text to SVG repository is a simple tool that converts text into Scalable Vec
 ### Prerequisites
 
 - Python 3.11.+
-
+- Pytorch 2.*+
 ### Web Interface
 
 1. Clone this repository:
