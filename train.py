@@ -48,9 +48,14 @@ else:
 
 print("Model : ",file)
 
+# -----------------
+# DAtaset  x = dataset[0] y=dataset[1]
+# out : Data[Dataloader]
+
 
 NLP_FL = model.NET().to(device=device)
-
-
+optim = torch.optim.Adam(NLP_FL.parameters(),lr=1e2)
+crite = torch.nn.CrossEntropyLoss()
 for i in range(epoch):
-    print(i)
+    print(f"[ Epoch :{ i+1 }\t]")
+    
