@@ -50,6 +50,7 @@ args = prase.parse_args()
 file,dataset,epoch = args.model,args.dataset,args.epoch
 device = "cuda" if args.gpu else "cpu"
 
+
 if args.gpu:
     print("Using GPU ")
 else:
@@ -63,6 +64,7 @@ print("Model : ",file)
 Data = {}
 # -----------------------
 
+NLP_FL = torch.load(file) if not args.new else model.NET().to(device=device)
 NLP_FL = model.NET().to(device=device)
 NLP_FL.train()
 optim = torch.optim.Adam(NLP_FL.parameters(),lr=1e2)
