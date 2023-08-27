@@ -34,7 +34,12 @@ prase.add_argument(
 prase.add_argument(
     "--conform","-c",
     action="store_true",
-    help="epoch",
+    help="default to conform",
+)
+prase.add_argument(
+    "--new",
+    action="store_true",
+    help="create new model",
 )
 gpu_groups = prase.add_mutually_exclusive_group(required=True)
 gpu_groups.add_argument("-cpu",action="store_true")
